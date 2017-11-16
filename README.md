@@ -1,14 +1,14 @@
-# jldeen does dotfiles - forked from holman's repo
+# tifabien does dotfiles - forked from jldeen's repo
 
 ### WSL Configuration
 Run the following to configure WSL from scratch...
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/jldeen/dotfiles/wsl/configure.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/tifabien/dotfiles/wsl/configure.sh)"
 ```
 ### WSL Emulator Install
 Run the following command from an Administrator PowerShell prompt...
 ```
-Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/jldeen/dotfiles/wsl/wslterm.ps1'))
+Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tifabien/dotfiles/wsl/wslterm.ps1'))
 ```
 
 ### Notes
@@ -31,13 +31,6 @@ forked dotfiles — say, "Java" — you can simply add a `java` directory and pu
 files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
-## what's inside
-
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you.
-[Fork holman's](https://github.com/holman/dotfiles/fork) or [Fork mine](htps://github.com/jldeen/dotfiles/fork), remove what you don't
-use, and build on what you do use.
 
 ## components
 
@@ -64,7 +57,7 @@ There are two branches here: WSL and MacOS (still in development).
 Run this:
 
 ```sh
-git clone https://github.com/jldeen/dotfiles.git ~/.dotfiles
+git clone https://github.com/tifabien/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -90,12 +83,3 @@ something if I forget to make a check for a dependency.
 If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/holman/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
-
-## thanks
-
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.

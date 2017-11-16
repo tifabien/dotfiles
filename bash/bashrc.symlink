@@ -8,6 +8,11 @@ case $- in
       *) return;;
 esac
 
+# Switch to ZSH shell
+if test -t 1; then
+exec zsh
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -124,6 +129,4 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
-export PATH=$PATH:/home/jldeen/bin
-
-source '/home/jldeen/lib/azure-cli/az.completion'
+export PATH=$PATH:/home/fab/bin

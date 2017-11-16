@@ -52,7 +52,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history)
 ## 
 
 # Default username to hide "user@hostname" info
-DEFAULT_USER="jldeen"
+DEFAULT_USER="fab"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,7 +96,7 @@ DEFAULT_USER="jldeen"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo git history taskwarrior tmux tmuxinator zsh-autosuggestions)
+plugins=(sudo git history taskwarrior tmux tmuxinator zsh-autosuggestions symfony2)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -144,4 +144,3 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 export PATH=$PATH:~/bin
 
 autoload bashcompinit && bashcompinit
-#source '/Users/jessicadeen/lib/azure-cli/az.completion'
