@@ -3,20 +3,12 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export TERM=screen-256color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# POWERLEVEL9K_IP_INTERFACE='en0'
-# POWERLEVEL9K_PUBLIC_IP_HOST='http://ident.me'
-
-# zsh tmux settings
-ZSH_TMUX_AUTOSTART='true'
 
 ## Powerlevel9k Settings
 POWERLEVEL9K_HISTORY_BACKGROUND='green'
@@ -32,30 +24,10 @@ POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%F{red} \Uf1d0 %f %F{yellow
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history)
-
-# # Refresh Function - https://babushk.in/posts/renew-environment-tmux.html
-# if [ -n "$TMUX" ]; then                                                                               
-#   function refresh {                                                                                
-#     export $(tmux show-environment | grep "^SSH_AUTH_SOCK")                                       
-#     export $(tmux show-environment | grep "^DISPLAY")                                               
-#   }                                                                                                 
-# else                                                                                                  
-#   function refresh { }                                                                              
-# fi
-
-# # Then, I define a preexec hook that calls refresh before each new command that gets executed:
-# function preexec {                                                                                    
-#     refresh                                                                                           
-# }
-
-# POWERLEVEL9K_TIME_FORMAT="%D{%T | %m.%d.%y}"
-## 
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Default username to hide "user@hostname" info
 DEFAULT_USER="fab"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -96,11 +68,12 @@ DEFAULT_USER="fab"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo git history taskwarrior tmux tmuxinator zsh-autosuggestions symfony2)
+plugins=(sudo git history zsh-autosuggestions symfony2)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.fonts/*.sh
 
 # User configuration
 
@@ -131,16 +104,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
-# alias EDITOR=nvim
-
-#Powerline
-#if [ -d "$HOME/Library/Python/2.7/bin" ]; then
-#    PATH="$HOME/Library/Python/2.7/bin:$PATH"
-#fi
-
-#repository_root="$HOME/Library/Python/2.7/lib/python/site-packages"
-#. $repository_root/powerline/bindings/zsh/powerline.zsh
 
 export PATH=$PATH:~/bin
 
-autoload bashcompinit && bashcompinit

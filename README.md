@@ -1,16 +1,5 @@
 # tifabien does dotfiles - forked from jldeen's repo
 
-### WSL Configuration
-Run the following to configure WSL from scratch...
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/tifabien/dotfiles/wsl/configure.sh)"
-```
-### WSL Emulator Install
-Run the following command from an Administrator PowerShell prompt...
-```
-Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tifabien/dotfiles/wsl/wslterm.ps1'))
-```
-
 ### Notes
 Your dotfiles are how you personalize your system. These are mine.
 
@@ -18,7 +7,7 @@ I was a little tired of having long alias files and everything strewn about
 (which is extremely common on other dotfiles projects, too). That led to this
 project being much more topic-centric. I realized I could split a lot of things
 up into the main areas I used (git, system libraries, and so on), so I
-structured the project accordingly. I also created branches for WSL and MacOS since those are my two environments.
+structured the project accordingly.
 
 If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read Holman's post on the
@@ -38,7 +27,6 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **Brewfile**: This is a list of applications for [Homebrew Cask](https://caskroom.github.io) to install: things like Chrome and 1Password and Adium and stuff. Might want to edit this file before running any initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -52,7 +40,6 @@ There's a few special files in the hierarchy.
   symlinked in when you run `script/bootstrap`.
 
 ## install
-There are two branches here: WSL and MacOS (still in development).
 
 Run this:
 
@@ -66,7 +53,7 @@ This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
 The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine. You also might want to configure `.tmux.conf` since I run a few scripts in the status bar.
+which sets up a few paths that'll be different on your particular machine.
 
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from
