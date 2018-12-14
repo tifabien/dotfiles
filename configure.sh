@@ -91,7 +91,6 @@ else
 	echo "source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc && echo "added zsh-autosuggestions to .zshrc..."
 	echo ''
 	echo "source $HOME/.git-completion.bash" >> ${ZDOTDIR:-$HOME}/.bashrc && echo "added git-completion to .bashrc..."
-	
 fi
 
 # Set default shell to zsh
@@ -107,6 +106,7 @@ then
         echo "Successfully set your default shell to zsh..."
     else
         echo "Default shell not set successfully..." >&2
+    fi
 fi
 echo ''
 echo '	Badass WSL terminal installed!'
