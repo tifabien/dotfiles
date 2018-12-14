@@ -46,7 +46,7 @@ Run this:
 ```sh
 git clone https://github.com/tifabien/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+./configure.sh
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.

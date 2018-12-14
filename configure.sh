@@ -55,7 +55,7 @@ mv dircolors.256dark .dircolors
 git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/.oh-my-zsh/custom/awesome-terminal-fonts
 mkdir -p ~/.fonts
 cp -a ~/.oh-my-zsh/custom/awesome-terminal-fonts/build/* ~/.fonts/
-fc-cache -fv ~/.fonts
+sudo fc-cache -fv ~/.fonts
 mkdir -p ~/.config/fontconfig/conf.d
 cp ~/.oh-my-zsh/custom/awesome-terminal-fonts/config/10-symbols.conf ~/.config/fontconfig/conf.d
 rm -rf ~/.oh-my-zsh/custom/awesome-terminal-fonts
