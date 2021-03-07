@@ -28,9 +28,6 @@
         autocorrect = 1
 [push]
         default = current
-[user]
-        email = flucas2@gmail.com
-        name = Fabien Lucas
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
